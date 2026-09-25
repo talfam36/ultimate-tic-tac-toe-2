@@ -36,8 +36,10 @@ jobs:
       - name: Verify AI legality and bounded proof layer
         run: node test-ai.mjs
 
-      - name: Configure Pages
+      - name: Configure and enable Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload static site
         uses: actions/upload-pages-artifact@v4
